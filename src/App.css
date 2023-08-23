@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'TPX';
-  src: url('thaipixel.ttf');
+  src: url('./thaipixel.ttf');
 }
 
 * {
