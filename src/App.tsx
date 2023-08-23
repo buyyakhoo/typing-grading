@@ -74,14 +74,14 @@ function App() {
       <div className="text-white flex flex-col items-center w-4/5 md:w-[45rem] min-h-[30rem] bg-yellow-800 p-5 rounded-lg gap-3">
         <h1 className="text-6xl">WPM Grading</h1>
         <p className="text-4xl">Let's evaluate your typing speed.</p>
-        <div className="flex w-48">
+        <div className="flex w-52">
 
           <input 
             type="text" 
             name="task" 
             value={task} 
             onChange={handleChange} 
-            placeholder="Enter a new WPM" 
+            placeholder="Your WPM" 
             className="text-2xl flex-1 rounded-l-lg p-1 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white w-5/6" 
           />
 
