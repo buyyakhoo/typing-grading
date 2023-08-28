@@ -9,7 +9,7 @@ function App() {
   const [grade, setGrade] = useState<string>("")
 
   const gradeRanges = [
-    { grade: "A", minScore: 66 },
+    { grade: "A", minScore: 65 },
     { grade: "B+", minScore: 60 },
     { grade: "B", minScore: 55 },
     { grade: "C+", minScore: 50 },
