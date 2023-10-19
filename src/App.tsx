@@ -8,7 +8,7 @@ function App() {
   const [score, setScore] = useState<number>();
   const [grade, setGrade] = useState<string>("")
 
-  const gradeRanges = [
+  const grade_ranges = [
     { grade: "A", minScore: 65 },
     { grade: "B+", minScore: 60 },
     { grade: "B", minScore: 55 },
@@ -20,27 +20,14 @@ function App() {
   ];
 
   function calculateGrade(score: number) : string {
-    for (let i=0; i<gradeRanges.length; i++) {
-      if (score >= gradeRanges[i].minScore) {
-        return gradeRanges[i].grade;
-      }
-    }
-
-    return "Error";
+    const found_g = grade_ranges.find((item) => score >= item.minScore);
+    return found_g ? found_g.grade : "Error";
   }
 
   useEffect(() => {
     if (wpmSpeed) {
-      const score_temp: number = 50 + (10 * (wpmSpeed - 40) / 16.7)
-      // console.log(score_temp, wpmSpeed);
-      setScore(() => {
-          if (score_temp > 100) {
-            return 100;
-          } else {
-            return round(score_temp);
-          }
-        }
-      )
+      const score_temp: number = 50 + (10 * (wpmSpeed - 40) / 18)
+      setScore(() => score_temp > 100 ? 100 : round(score_temp));
     }
 
     if (score) {
